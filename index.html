@@ -12,12 +12,22 @@
             color: white;
             margin: 0;
             padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "header header"
+            "overview portrait"
+            "achievement achievement"
+            "experience education"
+            "footer footer";
+            
         }
         header {
             background-color: #333;
             color: #4CAF50;
             padding: 20px;
             text-align: center;
+            grid-area: header;
         }
         h2 {
             color: #4CAF50;
@@ -25,6 +35,31 @@
         section {
             margin: 20px 0;
         }
+        .Overview{
+            grid-area: overview;
+        }
+        .image{
+            grid-area: portrait;
+        }
+        img{
+            height: 20em;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            display: block;
+        }
+        .Achievement{
+            grid-area: achievement;
+        }
+        .Experience{
+            grid-area: experience;
+        }
+        .Education{
+            grid-area: education
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -37,6 +72,7 @@
             margin-top: 30px;
             font-size: 14px;
             color: #777;
+            grid-area: footer;
         }
     </style>
 </head>
@@ -45,7 +81,7 @@
         <h1>Jonah's IT and Cybersecurity Biography</h1>
     </header>
     
-    <section>
+    <section class="Overview">
         <h2>Professional Overview</h2>
         <p>My name is Jonah, and I am an IT Technician with a solid foundation in network administration, software implementation, and external desktop support. I have gained valuable technical experience through my roles at TeamLogic IT and through my academic journey at the University of South Florida (USF). Additionally, I hold certifications in the following areas:</p>
         <ul>
@@ -55,14 +91,18 @@
         </ul>
     </section>
 
-    <section>
+    <section class="image">
+        <img src="images\headshot.jpg" alt="headshot-image">
+    </section>
+
+    <section class="Achievement">
         <h2>Cybersecurity Achievement</h2>
         <p>I am excited to share that I have successfully completed the <em>Advent of Cyber 2024</em> challenge from TryHackMe. This holiday-themed cybersecurity learning journey has been an incredible opportunity for me to sharpen my skills in key areas such as web application security, cryptography, and network exploitation. I thoroughly enjoyed solving the engaging challenges and collaborating with the vibrant TryHackMe community.</p>
         <p>This experience not only helped me expand my cybersecurity knowledge but also reinforced my passion for ethical hacking. I am eager to continue pushing my skills forward in this ever-evolving field.</p>
         <p>If you're interested in learning more about ethical hacking, penetration testing, or cybersecurity in general, I highly recommend exploring TryHackMe. It is an outstanding platform for anyone looking to grow in the field!</p>
     </section>
 
-    <section>
+    <section class="Experience">
         <h2>Professional Experience</h2>
         <ul>
             <li>
@@ -78,7 +118,7 @@
         </ul>
     </section>
 
-    <section>
+    <section class="Education">
         <h2>Education</h2>
         <ul>
             <li>
